@@ -69,16 +69,20 @@ PlaywrightAIBatch/
 │           ├── testng.xml
 │           └── src/
 │
-└── 02_javascript/                    # JavaScript + Playwright Track
-    ├── JS_01_JS_Intro_And_Setup/     # JS Intro, V8 Engine, Node.js Setup
-    │   ├── JS_01_notes.md            # Class notes
-    │   ├── JS_01_exercises.md        # 10 in-class exercises
-    │   └── JS_01_homework.md         # 5 homework exercises
+└── 02_javascript/                         # JavaScript + Playwright Track
+    ├── Javascript_01_Intro_And_Setup/     # JS Intro, V8 Engine, Node.js Setup
+    │   ├── JS_01_notes.md                 # Class notes
+    │   ├── JS_01_exercises.md             # 10 in-class exercises
+    │   ├── JS_01_homework.md              # 5 homework exercises
+    │   ├── 01_verify_setup.js ... 10_v8_pipeline_trace.js  # Exercise files
+    │   └── solutions/                     # All 10 solutions with explanations
     │
-    └── JS_02_Variables_And_DataTypes/ # var, let, const, Hoisting, typeof
-        ├── JS_02_notes.md            # Class notes
-        ├── JS_02_exercises.md        # 10 in-class exercises
-        └── JS_02_homework.md         # 5 homework exercises
+    └── Javascript_02_Variables_And_DataTypes/  # var, let, const, Hoisting, typeof
+        ├── JS_02_notes.md                 # Class notes
+        ├── JS_02_exercises.md             # 10 in-class exercises
+        ├── JS_02_homework.md              # 5 homework exercises
+        ├── 01_var_scope_trap.js ... 10_test_summary.js  # Exercise files
+        └── solutions/                     # All 10 solutions with explanations
 ```
 
 ---
@@ -134,7 +138,7 @@ PlaywrightAIBatch/
 
 ## 📗 JS_01: JavaScript Intro & V8 Engine Architecture
 
-**Location:** `02_javascript/JS_01_JS_Intro_And_Setup/`
+**Location:** `02_javascript/Javascript_01_Intro_And_Setup/`
 
 ### 🎯 Learning Objectives
 
@@ -161,7 +165,7 @@ PlaywrightAIBatch/
 
 ## 📗 JS_02: Variables & Data Types
 
-**Location:** `02_javascript/JS_02_Variables_And_DataTypes/`
+**Location:** `02_javascript/Javascript_02_Variables_And_DataTypes/`
 
 ### 🎯 Learning Objectives
 
@@ -288,10 +292,10 @@ cd PlaywrightAIBatch
 cd 02_javascript
 
 # Start with JS_01 notes
-cat JS_01_JS_Intro_And_Setup/JS_01_notes.md
+cat Javascript_01_Intro_And_Setup/JS_01_notes.md
 
 # Practice exercises
-cat JS_01_JS_Intro_And_Setup/JS_01_exercises.md
+cat Javascript_01_Intro_And_Setup/JS_01_exercises.md
 ```
 
 ### Install Ollama (Both Tracks)
