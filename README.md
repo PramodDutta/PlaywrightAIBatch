@@ -40,8 +40,8 @@ This course offers **two parallel tracks** to accommodate different technology s
 
 | Chapter | Java Track (01_learnai) | JavaScript Track (02_javascript) |
 |---------|-------------------------|----------------------------------|
-| **Chapter 1** | [Foundation Model](#chapter-1-foundation-model-java-track) | [Foundation Model](#chapter-1-foundation-model-javascript-track) |
-| **Chapter 2** | [Prompt Engineering](#chapter-2-prompt-engineering-java-track) | Coming Soon |
+| **Chapter 1** | [Foundation Model](#chapter-1-foundation-model-java-track) | [JS Intro & V8 Engine](#js_01-javascript-intro--v8-engine-architecture) |
+| **Chapter 2** | [Prompt Engineering](#chapter-2-prompt-engineering-java-track) | [Variables & Data Types](#js_02-variables--data-types) |
 
 ---
 
@@ -76,16 +76,15 @@ PlaywrightAIBatch/
 │                   └── InvalidLoginTest.java
 │
 └── 02_javascript/                    # JavaScript + Playwright Track
-    ├── chapter1/                     # AI/ML Fundamentals (JavaScript)
-    │   ├── README.md
-    │   ├── ch_01_ml_ai_deep_learning.md
-    │   ├── ch_01_llm_comparisons.md
-    │   ├── ch_01_anti_hallucination_rule.md
-    │   └── practical_guides/
-    │       └── ch_01_local_llm_setup_ollama.md
+    ├── JS_01_JS_Intro_And_Setup/     # JS Intro, V8 Engine, Node.js Setup
+    │   ├── JS_01_notes.md            # Class notes
+    │   ├── JS_01_exercises.md        # 10 in-class exercises
+    │   └── JS_01_homework.md         # 5 homework exercises
     │
-    └── chapter2/                     # Prompt Engineering (JavaScript)
-        └── [Coming Soon]
+    └── JS_02_Variables_And_DataTypes/ # var, let, const, Hoisting, typeof
+        ├── JS_02_notes.md            # Class notes
+        ├── JS_02_exercises.md        # 10 in-class exercises
+        └── JS_02_homework.md         # 5 homework exercises
 ```
 
 ---
@@ -139,32 +138,60 @@ PlaywrightAIBatch/
 
 ---
 
-## 📗 Chapter 1: Foundation Model (JavaScript Track)
+## 📗 JS_01: JavaScript Intro & V8 Engine Architecture
 
-**Location:** `02_javascript/chapter1/`
+**Location:** `02_javascript/JS_01_JS_Intro_And_Setup/`
 
 ### 🎯 Learning Objectives
 
-- Understand AI/ML/Deep Learning fundamentals for JavaScript QA
-- Compare LLMs for Playwright/Cypress test automation
-- Set up local LLMs with Ollama for privacy-first testing
-- Apply anti-hallucination rules for JavaScript/TypeScript code
+- Understand what JavaScript is and its role in web development (HTML / CSS / JS)
+- Learn how JS code executes in the V8 engine (parsing, AST, bytecode, machine code)
+- Understand the V8 components: Parser, Ignition, Profiler, TurboFan, Garbage Collector
+- Set up VSCode and Node.js for JavaScript development
 
 ### 📄 Topics Covered
 
 | File | Description |
 |------|-------------|
-| `ch_01_ml_ai_deep_learning.md` | AI fundamentals with Playwright/JavaScript context |
-| `ch_01_llm_comparisons.md` | LLM comparison for JavaScript test automation |
-| `ch_01_anti_hallucination_rule.md` | 10 rules to prevent bad Playwright code generation |
-| `ch_01_local_llm_setup_ollama.md` | Ollama setup with Node.js integration examples |
+| `JS_01_notes.md` | V8 engine architecture, tokenization, AST, bytecode, call stack, memory phases |
+| `JS_01_exercises.md` | 10 hands-on exercises: setup verification, AST drawing, bytecode analysis, call stack tracing |
+| `JS_01_homework.md` | 5 homework exercises: Node REPL, AST Explorer, bytecode analysis, optimization experiments |
 
-### 💡 JavaScript-Specific Features
+### 🧠 Key Concepts
 
-- Playwright API verification techniques
-- TypeScript type safety with AI-generated code
-- Node.js integration with Ollama
-- VS Code extension setup for AI assistance
+- JS is an **interpreted language with JIT compilation**
+- V8 Pipeline: Source Code → Parser → AST → Ignition (Bytecode) → TurboFan (Machine Code) → CPU
+- Compilation types: Java (AOT + JIT), JavaScript (JIT), TypeScript (AOT + JIT)
+
+---
+
+## 📗 JS_02: Variables & Data Types
+
+**Location:** `02_javascript/JS_02_Variables_And_DataTypes/`
+
+### 🎯 Learning Objectives
+
+- Understand `var`, `let`, `const` and their scope differences
+- Learn hoisting and the Temporal Dead Zone (TDZ)
+- Master JavaScript data types (primitive and non-primitive)
+- Use `typeof` to validate data types
+
+### 📄 Topics Covered
+
+| File | Description |
+|------|-------------|
+| `JS_02_notes.md` | var/let/const comparison, hoisting, TDZ, data types, typeof quirks |
+| `JS_02_exercises.md` | 10 hands-on exercises: scope traps, hoisting bugs, typeof validation, test summaries |
+| `JS_02_homework.md` | 5 homework exercises: loop variable bugs, type validator function, Playwright patterns preview |
+
+### 🧠 Key Concepts
+
+| Feature | `var` | `let` | `const` |
+|---------|-------|-------|---------|
+| Scope | Function | Block | Block |
+| Hoisting | Yes (undefined) | Yes (TDZ) | Yes (TDZ) |
+| Re-declaration | Allowed | Not allowed | Not allowed |
+| Reassignment | Allowed | Allowed | Not allowed |
 
 ---
 
@@ -225,20 +252,6 @@ mvn clean test
 
 ---
 
-## 📘 Chapter 2: Prompt Engineering (JavaScript Track)
-
-**Location:** `02_javascript/chapter2/`
-
-### 🚧 Coming Soon
-
-This chapter will cover:
-- Prompt engineering for Playwright test generation
-- Building enterprise Playwright frameworks with AI
-- TypeScript Page Object Models
-- Advanced prompting techniques for JavaScript QA
-
-**Expected Release:** Q2 2024
-
 ---
 
 ## 🚀 Getting Started
@@ -285,10 +298,11 @@ cd PlaywrightAIBatch
 # Navigate to JavaScript track
 cd 02_javascript
 
-# Read Chapter 1 materials
-cat chapter1/README.md
+# Start with JS_01 notes
+cat JS_01_JS_Intro_And_Setup/JS_01_notes.md
 
-# Chapter 2 coming soon!
+# Practice exercises
+cat JS_01_JS_Intro_And_Setup/JS_01_exercises.md
 ```
 
 ### Install Ollama (Both Tracks)
@@ -351,17 +365,20 @@ Week 2: Chapter 2 - Prompt Engineering
 ### JavaScript Track (02_javascript)
 
 ```
-Week 1: Chapter 1 - Foundation Model
-├── Day 1-2: AI/ML/Deep Learning for JavaScript QA
-├── Day 3-4: LLM comparisons for Playwright
-├── Day 5-6: Set up Ollama with Node.js
-└── Day 7: Practice anti-hallucination rules
+Session 1: JS_01 - JavaScript Intro & V8 Engine
+├── What is JavaScript (HTML/CSS/JS)
+├── V8 Engine Architecture (Parser, AST, Ignition, TurboFan)
+├── VSCode + Node.js Setup
+├── 10 In-Class Exercises
+└── 5 Homework Exercises
 
-Week 2: Chapter 2 - Prompt Engineering (Coming Soon)
-├── Day 1-2: Prompt frameworks for Playwright
-├── Day 3-4: TypeScript test generation
-├── Day 5-6: Build Page Object Models with AI
-└── Day 7: Create enterprise Playwright framework
+Session 2: JS_02 - Variables & Data Types
+├── var, let, const (scope differences)
+├── Hoisting & Temporal Dead Zone (TDZ)
+├── Data Types (primitive vs non-primitive)
+├── typeof operator and quirks
+├── 10 In-Class Exercises
+└── 5 Homework Exercises
 ```
 
 ---
