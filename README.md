@@ -19,29 +19,29 @@
 
 ## 📖 Course Overview
 
-This repository contains hands-on materials for mastering **AI-Powered Test Automation** in both **Java (Selenium)** and **JavaScript (Playwright)** tracks. Learn how to leverage Large Language Models (LLMs) for intelligent test case generation, automation framework development, and enterprise QA practices.
+This repository contains hands-on materials for mastering **AI-Powered Test Automation**. Start with **AI/ML fundamentals and prompt engineering**, then dive into **JavaScript and Playwright** for modern test automation. Learn how to leverage Large Language Models (LLMs) for intelligent test case generation, automation framework development, and enterprise QA practices.
 
 ---
 
 ## 🎯 Learning Tracks
 
-This course offers **two parallel tracks** to accommodate different technology stacks:
+This course is structured in **two modules**:
 
-| Track | Technology | Framework | Best For |
-|-------|------------|-----------|----------|
-| **01_learnai** | Java | Selenium + TestNG | Enterprise Java teams, traditional QA |
-| **02_javascript** | JavaScript/TypeScript | Playwright | Modern web teams, full-stack developers |
+| Module | Focus | Topics |
+|--------|-------|--------|
+| **01_learnai** | AI/ML Basics & Prompt Engineering | AI fundamentals, LLM comparisons, prompt frameworks, anti-hallucination rules |
+| **02_javascript** | JavaScript + Playwright | JS fundamentals, variables, data types, and building toward Playwright automation |
 
-**Choose your track** based on your team's technology stack, or learn both to become a versatile QA engineer!
+**Start with 01_learnai** to build your AI foundation, then move to **02_javascript** for hands-on coding and automation!
 
 ---
 
 ## 📚 Table of Contents
 
-| Chapter | Java Track (01_learnai) | JavaScript Track (02_javascript) |
-|---------|-------------------------|----------------------------------|
-| **Chapter 1** | [Foundation Model](#chapter-1-foundation-model-java-track) | [JS Intro & V8 Engine](#js_01-javascript-intro--v8-engine-architecture) |
-| **Chapter 2** | [Prompt Engineering](#chapter-2-prompt-engineering-java-track) | [Variables & Data Types](#js_02-variables--data-types) |
+| Chapter | Learn AI Basics (01_learnai) | JavaScript Track (02_javascript) |
+|---------|-------------------------------|----------------------------------|
+| **Chapter 1** | [AI/ML Foundation](#chapter-1-aiml-foundation) | [JS Intro & V8 Engine](#js_01-javascript-intro--v8-engine-architecture) |
+| **Chapter 2** | [Prompt Engineering](#chapter-2-prompt-engineering) | [Variables & Data Types](#js_02-variables--data-types) |
 
 ---
 
@@ -51,8 +51,8 @@ This course offers **two parallel tracks** to accommodate different technology s
 PlaywrightAIBatch/
 ├── README.md
 │
-├── 01_learnai/                       # Java + Selenium Track
-│   ├── chapter1/                     # AI/ML Fundamentals (Java)
+├── 01_learnai/                       # Learn AI Basics
+│   ├── chapter1/                     # AI/ML Fundamentals
 │   │   ├── README.md
 │   │   ├── ch_01_ml_ai_deep_learning.md
 │   │   ├── ch_01_llm_comparisons.md
@@ -60,20 +60,14 @@ PlaywrightAIBatch/
 │   │   └── practical_guides/
 │   │       └── ch_01_local_llm_setup_ollama.md
 │   │
-│   └── chapter2/                     # Prompt Engineering (Java)
+│   └── chapter2/                     # Prompt Engineering
 │       ├── RICEPOT.md
 │       ├── Prompt_Frameworks.md
 │       ├── anti_hallucinations_rules.md
-│       └── SeleniumFramework/        # Enterprise Selenium Framework
+│       └── SeleniumFramework/        # Example Selenium Framework
 │           ├── pom.xml
 │           ├── testng.xml
 │           └── src/
-│               ├── main/java/com/salesforce/
-│               │   ├── base/BaseTest.java
-│               │   └── pages/LoginPage.java
-│               └── test/java/com/salesforce/tests/
-│                   ├── ValidLoginTest.java
-│                   └── InvalidLoginTest.java
 │
 └── 02_javascript/                    # JavaScript + Playwright Track
     ├── JS_01_JS_Intro_And_Setup/     # JS Intro, V8 Engine, Node.js Setup
@@ -89,7 +83,7 @@ PlaywrightAIBatch/
 
 ---
 
-## 📗 Chapter 1: Foundation Model (Java Track)
+## 📗 Chapter 1: AI/ML Foundation
 
 **Location:** `01_learnai/chapter1/`
 
@@ -98,15 +92,15 @@ PlaywrightAIBatch/
 - Understand the difference between AI, ML, and Deep Learning
 - Compare closed-source vs open-source LLMs
 - Set up local LLMs for QA workflows
-- Apply anti-hallucination rules for Java/Selenium
+- Apply anti-hallucination rules for AI-generated code
 
 ### 📄 Topics Covered
 
 | File | Description |
 |------|-------------|
 | `ch_01_ml_ai_deep_learning.md` | Comprehensive guide on AI → ML → Deep Learning → LLMs hierarchy |
-| `ch_01_llm_comparisons.md` | Comparison of GPT-4, Claude, Llama, Mistral for Java QA |
-| `ch_01_anti_hallucination_rule.md` | Rules to prevent AI from generating incorrect Selenium code |
+| `ch_01_llm_comparisons.md` | Comparison of GPT-4, Claude, Llama, Mistral for QA |
+| `ch_01_anti_hallucination_rule.md` | Rules to prevent AI from generating incorrect automation code |
 | `ch_01_local_llm_setup_ollama.md` | Step-by-step Ollama installation and configuration |
 
 ### 🧠 Key Concepts
@@ -195,16 +189,16 @@ PlaywrightAIBatch/
 
 ---
 
-## 📘 Chapter 2: Prompt Engineering (Java Track)
+## 📘 Chapter 2: Prompt Engineering
 
 **Location:** `01_learnai/chapter2/`
 
 ### 🎯 Learning Objectives
 
-- Master prompt engineering frameworks
-- Generate enterprise-level Selenium automation code
-- Build Page Object Model frameworks
-- Implement robust test automation with TestNG
+- Master prompt engineering frameworks (RICEPOT, STAR, CLEAR, CRISP)
+- Generate automation code using structured prompts
+- Understand anti-hallucination guidelines for AI-generated test code
+- Apply prompt frameworks to real QA scenarios
 
 ### 📄 Topics Covered
 
@@ -252,40 +246,35 @@ mvn clean test
 
 ---
 
----
-
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-**For Java Track (01_learnai):**
-- Java 17+
-- Maven 3.8+
-- Chrome/Firefox browser
+**For Learn AI Basics (01_learnai):**
 - Ollama (optional, for local LLMs)
+- Any browser for testing AI-generated code
 
 **For JavaScript Track (02_javascript):**
 - Node.js 18+
 - npm or yarn
+- VSCode
 - Chrome/Firefox browser
-- Ollama (optional, for local LLMs)
 
-### Quick Start - Java Track
+### Quick Start - Learn AI Basics
 
 ```bash
 # Clone the repository
 git clone https://github.com/PramodDutta/PlaywrightAIBatch.git
 cd PlaywrightAIBatch
 
-# Navigate to Java track
+# Navigate to AI basics
 cd 01_learnai
 
 # Read Chapter 1 materials
 cat chapter1/README.md
 
-# Run Selenium tests (Chapter 2)
-cd chapter2/SeleniumFramework
-mvn clean test
+# Read prompt engineering frameworks
+cat chapter2/RICEPOT.md
 ```
 
 ### Quick Start - JavaScript Track
@@ -322,15 +311,12 @@ ollama run llama3
 
 ## 🛠️ Technology Stack
 
-### Java Track (01_learnai)
+### Learn AI Basics (01_learnai)
 
 | Technology | Version | Purpose |
 |------------|---------|---------|
-| **Selenium** | 4.18.1 | Browser automation |
-| **TestNG** | 7.9.0 | Test framework |
-| **Java** | 17 | Primary language |
-| **Maven** | 3.8+ | Build tool |
 | **Ollama** | Latest | Local LLM hosting |
+| **GPT-4 / Claude** | Latest | AI code generation |
 
 ### JavaScript Track (02_javascript)
 
@@ -346,20 +332,20 @@ ollama run llama3
 
 ## 📖 Recommended Learning Path
 
-### Java Track (01_learnai)
+### Learn AI Basics (01_learnai)
 
 ```
-Week 1: Chapter 1 - Foundation Model
-├── Day 1-2: AI/ML/Deep Learning fundamentals
-├── Day 3-4: LLM comparisons and selection
-├── Day 5-6: Set up Ollama locally
-└── Day 7: Practice anti-hallucination rules
+Session 1: Chapter 1 - AI/ML Foundation
+├── AI/ML/Deep Learning fundamentals
+├── LLM comparisons and selection
+├── Set up Ollama locally
+└── Anti-hallucination rules
 
-Week 2: Chapter 2 - Prompt Engineering
-├── Day 1-2: Master RICEPOT framework
-├── Day 3-4: Learn STAR, CLEAR, CRISP
-├── Day 5-6: Generate Selenium code with prompts
-└── Day 7: Build your own Selenium framework
+Session 2: Chapter 2 - Prompt Engineering
+├── Master RICEPOT framework
+├── Learn STAR, CLEAR, CRISP
+├── Generate automation code with structured prompts
+└── Apply anti-hallucination guidelines
 ```
 
 ### JavaScript Track (02_javascript)
